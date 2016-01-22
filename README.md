@@ -1,4 +1,4 @@
-# jasper-home-assistant-io-integration
+# Jasper/Home-Assistant.io Integration
 
 A simple integration for [Jasper](http://jasperproject.github.io/) and [Home-Assistant.io](https://home-assistant.io/)
 
