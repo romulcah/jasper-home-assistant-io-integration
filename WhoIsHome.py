@@ -1,18 +1,8 @@
 # -*- coding: utf-8-*-
 import re
-import json
 import requests
 
 WORDS = ["WHO", "HOME"]
-
-"""
- make sure the following is copied and populated in ~/.jasper/profile.yml
- 
- ha_url: 
- ha_port: 
- ha_password: 
-
-"""
 
 
 def handle(text, mic, profile):
