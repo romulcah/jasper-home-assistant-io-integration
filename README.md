@@ -8,18 +8,22 @@ Currently just checks who is at home by using the device tracker. By issuing the
 
 Make sure the following is copied and populated in ~/.jasper/profile.yml
 
- 
+
+```
  ha_url: 
 
  ha_port: 
 
  ha_password: 
+```
 
-for example
+**For example**
 
 
+```
  ha_url: http://localhost/
 
  ha_port: 8123
 
  ha_password: abcd1234
+```
