@@ -73,9 +73,9 @@ def handle(text, mic, profile):
 
 def isValid(text):
     """
-        Returns True if the input is related to the meaning of life.
+        Returns True if the input is related to the home.
 
         Arguments:
         text -- user-input, typically transcribed speech
     """
-    return bool(re.search(r'\bhome\b', text, re.IGNORECASE))
+    return bool(re.search(r'\bwho is home\b', text, re.IGNORECASE))
