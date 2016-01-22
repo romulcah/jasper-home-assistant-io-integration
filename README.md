@@ -21,7 +21,7 @@ Make sure the following is copied and populated in ~/.jasper/profile.yml
 
 
 ```
- ha_url: http://localhost/
+ ha_url: http://localhost
 
  ha_port: 8123
 
