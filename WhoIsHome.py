@@ -7,24 +7,23 @@ WORDS = ["WHO", "HOME"]
 
 def handle(text, mic, profile):
 
-    """
-        Responds to user-input, typically speech text, by relaying the
-        meaning of life.
-
-        Arguments:
-        text -- user-input, typically transcribed speech
-        mic -- used to interact with the user (for both input and output)
-        profile -- contains information related to the user (e.g., phone
-                   number)
-    """
-
-	url = profile['ha_url']+':'+profile['ha_port']+'/api/states'
+	"""
+	    Responds to user-input, typically speech text, by relaying the
+	    meaning of life.
 	
-	headers = {'x-ha-access': profile['ha_password'],
-	           'content-type': 'application/json'}
-
-    r = requests.get(url, headers=headers)
-
+	    Arguments:
+	    text -- user-input, typically transcribed speech
+	    mic -- used to interact with the user (for both input and output)
+	    profile -- contains information related to the user (e.g., phone
+	               number)
+	"""
+	
+	url = str(profile['ha_url'])+':'+str(profile['ha_port'])+'/api/states'
+	
+	headers = {'x-ha-access': str(profile['ha_password']),'content-type': 'application/json'}
+	
+	r = requests.get(url, headers=headers)
+	
 	j = r.json()
 	
 	i=1
@@ -64,11 +63,11 @@ def handle(text, mic, profile):
 		message = message + at_work + concat2 + "at work. "
 		
 	if i==1 and ii==1:
-		message "There is no one at home"	
-    	
-    #message = "Home Assistant Activated"
-
-    mic.say(message)
+		message="There is no one at home"	
+		
+	#message = "Home Assistant Activated"
+	
+	mic.say(message)
 
 
 def isValid(text):
